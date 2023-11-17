@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+import 'package:mc_check/util/Colors.dart';
+//import 'package:provider/provider.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 
 class Scan extends StatefulWidget {
   const Scan({Key? key});
@@ -84,9 +84,8 @@ class _ScanState extends State<Scan> {
 
   @override
   Widget build(BuildContext context) {
-   
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: backgroundColor,
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -96,17 +95,17 @@ class _ScanState extends State<Scan> {
                   children: [
                     Row(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           width: 17,
                         ),
                         Column(
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 23,
                             ),
                             SizedBox(
                               child: IconButton(
-                                icon: Icon(
+                                icon: const Icon(
                                   Icons.arrow_back,
                                   size: 30,
                                 ),
@@ -120,7 +119,7 @@ class _ScanState extends State<Scan> {
                         ),
                         Column(
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 23,
                             ),
                             Text(
@@ -128,7 +127,7 @@ class _ScanState extends State<Scan> {
                               style: GoogleFonts.inter(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w700,
-                                color: Color(0xFF5CA6B0),
+                                color: buttonColor,
                               ),
                             ),
                           ],
@@ -138,19 +137,19 @@ class _ScanState extends State<Scan> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 202,
               ),
-              Center(
+              const Center(
                 child: Image(
                   image: AssetImage('assets/Generate.png'),
                   height: 200,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 130,
               ),
               Center(
@@ -162,7 +161,7 @@ class _ScanState extends State<Scan> {
                       style: TextStyle(color: Colors.black87)),
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all<Color>(Color(0xFF5CA6B0)),
+                        MaterialStateProperty.all<Color>(buttonColor),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(18.0),
@@ -171,7 +170,7 @@ class _ScanState extends State<Scan> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               GestureDetector(
