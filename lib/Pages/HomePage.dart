@@ -15,6 +15,18 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Image.asset(
+                  "assets/MC_BLUE.png",
+                  scale: 40,
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
             Image.asset(
               "assets/qr1.png",
               scale: 2,
@@ -42,7 +54,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       )),
