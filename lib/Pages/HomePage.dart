@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:mc_check/util/Button.dart';
 import 'package:mc_check/util/Colors.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            //a little mc logo if you guys thinks you can work on it better change it
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -27,34 +28,14 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
+            //the scan image
             Image.asset(
               "assets/qr1.png",
               scale: 2,
             ),
             const SizedBox(height: 80),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, 'scan page');
-              },
-              child: Container(
-                height: 50,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  color: buttonColor,
-                ),
-                child: Center(
-                  child: Text(
-                    "Scan QR code",
-                    style: GoogleFonts.poppins(
-                      color: Colors.grey.shade900,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                ),
-              ),
-            ),
+
+            ScanButton(),
           ],
         ),
       )),

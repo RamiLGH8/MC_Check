@@ -140,9 +140,9 @@ class _ScanState extends State<Scan> {
               const SizedBox(
                 height: 30,
               ),
-              const SizedBox(
+              /*  const SizedBox(
                 height: 202,
-              ),
+              ),*/
               const Center(
                 child: Image(
                   image: AssetImage('assets/Generate.png'),
