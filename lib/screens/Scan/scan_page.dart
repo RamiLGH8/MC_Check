@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+import 'package:mc_check/util/colors.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
-class Scan extends StatefulWidget {
-  const Scan({Key? key});
+class Scanpage extends StatefulWidget {
+  const Scanpage({Key? key});
 
   @override
-  State<Scan> createState() => _ScanState();
+  State<Scanpage> createState() => _ScanPageState();
 }
 
-class _ScanState extends State<Scan> {
+class _ScanPageState extends State<Scanpage> {
   String? qrData; // Variable to store the scanned QR code data
 
   Future _qrscanner() async {
@@ -65,7 +64,6 @@ class _ScanState extends State<Scan> {
   @override
   void initState() {
     super.initState();
-    _initCamera();
   }
 
   Future<void> _initCamera() async {
@@ -84,7 +82,6 @@ class _ScanState extends State<Scan> {
 
   @override
   Widget build(BuildContext context) {
-   
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -128,7 +125,7 @@ class _ScanState extends State<Scan> {
                               style: GoogleFonts.inter(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w700,
-                                color: Color(0xFF5CA6B0),
+                                color: blue,
                               ),
                             ),
                           ],
@@ -138,9 +135,7 @@ class _ScanState extends State<Scan> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 30,
-              ),
+            
               SizedBox(
                 height: 202,
               ),
@@ -156,13 +151,14 @@ class _ScanState extends State<Scan> {
               Center(
                 child: ElevatedButton(
                   onPressed: () {
+                    _initCamera();
                     _qrscanner();
                   },
                   child: Text("Scan for QR Code",
                       style: TextStyle(color: Colors.black87)),
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all<Color>(Color(0xFF5CA6B0)),
+                        MaterialStateProperty.all<Color>(blue),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(18.0),
