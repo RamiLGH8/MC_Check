@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mc_check/screens/Scan/scan_page.dart';
-import 'package:mc_check/screens/SplashScreen/splash_screen.dart';
+import 'package:mc_check/screens/qr_result.dart';
+import 'package:mc_check/screens/splash_screen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Scanpage(),
+      home: const SplashScreen(),
     );
   }
 }
