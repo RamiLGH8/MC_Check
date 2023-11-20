@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mc_check/screens/qr_result.dart';
 import 'package:mc_check/screens/splash_screen.dart';
 void main() {
   runApp(const MyApp());
