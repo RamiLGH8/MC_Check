@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mc_check/util/colors.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -125,7 +124,7 @@ class _ScanPageState extends State<Scanpage> {
                               style: GoogleFonts.inter(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w700,
-                                color: blue,
+                                color: Colors.blue,
                               ),
                             ),
                           ],
@@ -158,7 +157,7 @@ class _ScanPageState extends State<Scanpage> {
                       style: TextStyle(color: Colors.black87)),
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all<Color>(blue),
+                        MaterialStateProperty.all<Color>(Colors.blue),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(18.0),
