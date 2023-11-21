@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mc_check/screens/scan_page.dart';
+import 'package:mc_check/util/colors.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -34,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
           width: width,
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: [Colors.blue, const Color.fromRGBO(92, 166, 176, 1)])),
+                  colors: [blue, Color.fromRGBO(92, 166, 176, 1)])),
           child: Center(
             child: Container(
               child: Column(

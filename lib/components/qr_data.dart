@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mc_check/util/colors.dart';
 
 Widget QrData(String email, String fullName) {
   return Container(
@@ -6,7 +7,7 @@ Widget QrData(String email, String fullName) {
     width: 300,
     
      decoration: BoxDecoration(
-       gradient: LinearGradient(colors: [Colors.blue, const Color.fromARGB(255, 123, 164, 198)]),
+       gradient: LinearGradient(colors: [blue, Color.fromRGBO(92, 166, 176, 1)]),
         borderRadius: BorderRadius.circular(20),
      ),
     child: Column(
